@@ -1,10 +1,10 @@
-var Ball, database;
+var Ball;
+var database;
 var position;
 
 
 function setup(){
 
-  console.log(database);
   createCanvas(500,500);
 
   Ball = createSprite(250,250,10,10);
@@ -28,17 +28,14 @@ function draw(){
     else if(keyDown(DOWN_ARROW)){
       writePosition(0,+1);
     }
+  
     drawSprites();
   
 }
 
 function writePosition(x,y){
- 
+  Ball.x = Ball.x + x
+  Ball.y = Ball.y + y
 }
 
-function readPosition(data){
- 
-}
 
-function showError(){
-}
